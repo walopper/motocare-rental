@@ -73,10 +73,10 @@ export default defineComponent({
         <div class="header-title">{{ headerTitle }}</div>
         <div class="lang-button grow text-right">
             <q-btn @click="setLocale('en')" v-if="currentLocale === 'es'" flat class="flex-nowrap">
-                <q-icon name="img:assets/en.svg" class="mr-2 rounded" /> <span class="text-xs font-bold">ES</span>
+                <q-icon name="img:assets/en.svg" class="mr-2 rounded" /> <span class="text-xs font-bold">EN</span>
             </q-btn>
             <q-btn @click="setLocale('es')" v-if="currentLocale === 'en'" flat class="flex-nowrap">
-                <q-icon name="img:assets/es.svg" class="mr-2 rounded" /> <span class="text-xs font-bold">EN</span>
+                <q-icon name="img:assets/es.svg" class="mr-2 rounded" /> <span class="text-xs font-bold">ES</span>
             </q-btn>
         </div>
     </q-header>

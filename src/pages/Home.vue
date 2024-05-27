@@ -2,20 +2,15 @@
 import { ref, computed } from 'vue';
 import Motos from 'src/components/Motos.vue';
 import { useStore } from 'src/store';
+import VLazyImage from 'v-lazy-image';
 
 const galeria = ref([
-    '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg', '08.jpg', '09.jpg', '10.jpg',
-    '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg',
-    '21.jpg', '22.jpg', '23.jpg', '24.jpg', '25.jpg', '26.jpg', '27.jpg', '28.jpg', '29.jpg', '30.jpg',
-    '31.jpg', '32.jpg', '33.jpg', '34.jpg', '35.jpg', '36.jpg', '37.jpg', '38.jpg', '39.jpg', '40.jpg',
-    '41.jpg', '42.jpg', '43.jpg', '44.jpg', '45.jpg', '46.jpg', '47.jpg', '48.jpg', '49.jpg', '50.jpg',
-    '51.jpg', '52.jpg', '53.jpg', '54.jpg', '55.jpg', '56.jpg', '57.jpg', '58.jpg', '59.jpg', '60.jpg',
-    '61.jpg', '62.jpg', '63.jpg', '64.jpg', '65.jpg', '66.jpg', '67.jpg', '68.jpg', '69.jpg', '70.jpg',
-    '71.jpg', '72.jpg', '73.jpg', '74.jpg', '75.jpg', '76.jpg', '77.jpg', '78.jpg', '79.jpg', '80.jpg',
-    '81.jpg', '82.jpg', '83.jpg', '84.jpg', '85.jpg', '86.jpg', '87.jpg', '88.jpg', '89.jpg', '90.jpg',
-    '91.jpg', '92.jpg', '93.jpg', '94.jpg', '95.jpg', '96.jpg', '97.jpg', '98.jpg', '99.jpg', '100.jpg',
-    '101.jpg', '102.jpg', '103.jpg', '104.jpg', '105.jpg', '106.jpg', '107.jpg', '108.jpg', '109.jpg', '110.jpg',
-    '111.jpg', '112.jpg', '113.jpg', '114.jpg', '115.jpg', '116.jpg', '117.jpg', '118.jpg'
+    '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20',
+    '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '39', '40',
+    '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60',
+    '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '80',
+    '81', '82', '83', '84', '85', '86', '87', '88', '89', '90', '91', '92', '93', '94', '95', '96', '97', '98', '99', '100',
+    '101', '102', '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118'
 ]);
 
 const store = useStore();
@@ -145,7 +140,13 @@ const viewImageDialog = computed({
 
         <masonry-wall :items="galeria" :column-width="250" :gap="9" class="galeria" :min-columns="2">
             <template #default="{ item }">
-                <img :src="`assets/galeria/${item}`" alt="" @click="viewImage = item" /> 
+                <VLazyImage 
+                    :src="`assets/galeria/${item}.jpg`"
+                    :src-placeholder="`assets/galeria/${item}.webp`"
+                    class="w-full"
+                    alt=""
+                    @click="viewImage = item"
+                /> 
             </template>
         </masonry-wall>
 
@@ -159,7 +160,7 @@ const viewImageDialog = computed({
         <q-dialog v-model="viewImageDialog" backdrop-filter="blur(4px) sepia(40%)">
             <q-card>
                 <q-card-section>
-                    <img :src="`assets/galeria/${viewImage}`" alt="" /> 
+                    <img :src="`assets/galeria/${viewImage}.jpg`" alt="" /> 
                 </q-card-section>
             </q-card>
         </q-dialog>
