@@ -34,9 +34,9 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="moto">
-        <div class="image">
-            <img :src="`assets/images/${data.tn}`" alt="" />
+    <div class="moto grow w-[80vw] sm:w-auto shrink-0">
+        <div class="w-full text-center overflow-hidden z-10">
+            <img :src="`assets/images/${data.tn}`" :alt="data.brand +' '+ data.model" class="w-full sm:max-w-[240px] mx-auto" />
         </div>
         <div class="model">{{ data.brand }} {{ data.model }}</div>
         <div class="price">
@@ -94,24 +94,8 @@ export default defineComponent({
 // }
 
 .moto {
-    width: calc(33.33% - 10px);
-
     > * {
         text-align: center;
-    }
-
-    &:nth-child(2) {
-        margin: 0 30px;
-    }
-
-    @media only screen and (max-width: 480px) {
-        width: 100%;
-        margin-top: 40px;
-
-        &:nth-child(2) {
-            width: 100%;
-            margin: 40px 0 0 0;
-        }
     }
 
     .techspecs-container {
@@ -188,12 +172,6 @@ export default defineComponent({
                 }
             }
         }
-    }
-
-    .image {
-        display: flex;
-        justify-content: center;
-        margin-bottom: -25px;
     }
 
     .model {

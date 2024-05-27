@@ -1,6 +1,6 @@
 <script>
 import { defineComponent, onMounted, computed } from 'vue';
-import fichas from '../data/fichas';
+import { useStore } from 'src/store';
 import { useRoute } from 'vue-router';
 import useNavigation from '../composables/userNavigation';
 
@@ -9,8 +9,9 @@ export default defineComponent({
     setup() {
         const { gotoHome, gotoReservation } = useNavigation();
         const route = useRoute();
+        const store = useStore();
         const motoId = route.params.motoId;
-        const ficha = computed(() => fichas[motoId] || null);
+        const ficha = computed(() => store.fichas[motoId] || null);
 
         onMounted(() => {
             if (!ficha.value) {

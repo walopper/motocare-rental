@@ -2,8 +2,8 @@
 // so you can safely delete all default props below
 
 export default {
-    moreinfoText1: '<strong>Road:</strong> In Argentina you drive on your right, most roads have a single track by side, you can cross the whole country on paved roads  although sometimes you may pick gravel roads to reach some of the best spots..</p> <p>Driving along most roads is toll free and they are well provided of gas stations where to fill tank up, with a 300km (190miles) range you will not have to worry about running out of gas, except in some places in Southern Patagonia where you need to ask for the next stop before leaving the gas station.</p> <p>On average maximun allowed speed is 100 Km/h (62miles). Fuel cost is ar$ 260 per litre (as for July 2023).</p> <p><strong>Please note that ours are not ‘Off road’  bikes therefore they are not suitable for driving on not maintained dirt roads, trails or cross-country. (between other features, they bring 19 inches front wheel alloy rims)</strong>',
-    moreinfoText2: '<strong>Currency:</strong> At this time there are 2 different Exchange rates, the official one where 1 USA dollar = {dollarOficial} pesos and the second market or \'blue\' one where 1 USA dollar = {dollarBlue} pesos.  A meal costs from  U$S6, and hotels are found from U$S 18 per day. Any bags that you do not want to take on your motorcycle adventure can be left with us until your return',
+    moreinfoText1: '<strong>Road:</strong> In Argentina you drive on your right, most roads have a single track by side, you can cross the whole country on paved roads  although sometimes you may pick gravel roads to reach some of the best spots..</p> <p>Driving along most roads is toll free and they are well provided of gas stations where to fill tank up, with a 300km (190miles) range you will not have to worry about running out of gas, except in some places in Southern Patagonia where you need to ask for the next stop before leaving the gas station.</p> <p>On average maximun allowed speed is 100 Km/h (62miles). Fuel cost is ar$ 980 per litre (as for May 2024).</p> <p><strong>Please note that ours are not ‘Off road’  bikes therefore they are not suitable for driving on not maintained dirt roads, trails or cross-country. (between other features, they bring 19 inches front wheel alloy rims)</strong>',
+    moreinfoText2: '<strong>Currency:</strong> At this time there are 2 different Exchange rates, the official one where 1 USA dollar = {dollarOficial} pesos and the second market or \'blue\' one where 1 USA dollar = {dollarBlue} pesos.  A meal costs from  U$S12, and hotels are found from U$S 38 per day. Any bags that you do not want to take on your motorcycle adventure can be left with us until your return',
     moreInfo: 'More information',
     autonomy: 'Autonomy',
     book: 'Book',
@@ -41,7 +41,7 @@ export default {
     outFleet: 'Our fleet',
     per_day_price: 'Price per day',
     perDay: 'per day',
-    priceNote: 'Rental rates above are in US dollars, they are the cost for one day or 24hs and includes 350 free kilometers per day (extra Km is u$s 0,30) third party and theft insurance, top case and security lock. For rental periods longer than 28 days contact us and we will give you a special rate. <strong>Refundable security deposit for any model: u$s 2000. Prices valid thru May 2022.</strong>',
+    priceNote: 'Rental rates above are in US dollars, they are the cost for one day or 24hs and includes 350 free kilometers per day (extra Km is u$s 0,30) third party and theft insurance, top case and security lock. For rental periods longer than 28 days contact us and we will give you a special rate. <strong>Refundable security deposit for any model: u$s 2000. Prices valid thru May 2025.</strong>',
     rearBreak: 'Rear brake',
     rearSusp: 'Rear suspension',
     rearTyre: 'Rear tyre',

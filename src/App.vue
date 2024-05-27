@@ -8,6 +8,15 @@
 @tailwind utilities;
 
 @custom-media -mb (max-width: 480px);
+
+body {
+    overflow-x: hidden;
+}
+
+.no-scroll::-webkit-scrollbar {
+    opacity: 0;
+    width: 1px;
+}
 </style>
 
 <script>
@@ -20,6 +29,7 @@ export default defineComponent({
     setup() {
         const store = useStore();
         store.getDollar();
+        store.getFichas();
         setCssVar('primary', '#f16f00');
         document.body.style.setProperty('--q-primary', '#f16f00');
     },

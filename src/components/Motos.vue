@@ -1,38 +1,14 @@
-<script>
-import { defineComponent, computed } from 'vue';
-import { useQuasar } from 'quasar';
+<script setup>
 import Moto from 'src/components/Moto.vue';
-import fichas from 'src/data/fichas';
+import { useStore } from 'src/store';
 
-export default defineComponent({
-    name: 'Motos',
-    components: {
-        Moto,
-    },
-    setup() {
-        const $q = useQuasar();
-
-        const isMobile = computed(() => $q.platform.is.mobile);
-
-        return {
-            isMobile,
-            fichas,
-        };
-    },
-});
+const store = useStore();
 </script>
 
 <template>
-    <div class="motos">
-        <Moto v-for="(ficha, motoId) in fichas" :data="ficha" :moto-id="motoId" :key="ficha.model" />
+    <div class="overflow-x-scroll w-screen">
+        <div class="no-scrollg flex gap-3 items-start justify-between flex-nowrap px-[10vw] sm:px-8 pb-6">
+            <Moto v-for="(ficha, motoId) in store.fichas" :data="ficha" :moto-id="motoId" :key="ficha.model" />
+        </div>
     </div>
 </template>
-<style lang="scss">
-.motos {
-    display: flex;
-
-    @media only screen and (max-width: 480px) {
-        flex-direction: column;
-    }
-}
-</style>

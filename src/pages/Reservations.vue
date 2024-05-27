@@ -1,6 +1,5 @@
 <script>
 import { defineComponent, onMounted, computed, ref } from 'vue';
-import fichas from 'src/data/fichas';
 import { useRoute } from 'vue-router';
 import useNavigation from 'src/composables/userNavigation';
 import { useQuasar } from 'quasar';
@@ -23,7 +22,7 @@ export default defineComponent({
 
         const isMobile = computed(() => $q.platform.is.mobile);
         const motoId = route.params.motoId;
-        const ficha = computed(() => fichas[motoId] || null);
+        const ficha = computed(() => store.fichas[motoId] || null);
 
         onMounted(() => {
             if (!ficha.value) {
